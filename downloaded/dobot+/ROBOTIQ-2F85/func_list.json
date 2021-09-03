@@ -1,0 +1,89 @@
+{
+    "name":"ROBOTIQ-2F85",
+    "func":[
+        {
+            "funcName":"RiqInit",
+            "funcShow":"RiqInit()",
+            "func_description":"初始化RIQ夹爪",
+            "func_description_en":"Initialize RIQ gripper"
+        },
+        {
+            "funcName":"RiqOpen",
+            "funcShow":"RiqOpen()",
+            "func_description":"以最大速度和夹力阈值参数打开夹爪",
+            "func_description_en":"Open the jaws at maximum speed and clamping force threshold parameters",
+            "first":{
+				"param_description":"等待夹爪打开所需时间，单位：毫秒",
+                "param_description_en":"Time to wait for gripper to open in milliseconds",
+                "int_range":[
+                    0,
+                    60000
+                ],
+                "isDefault":false,
+                "type":"int"
+            }
+		},	
+        {
+            "funcName":"RiqClose",
+            "funcShow":"RiqClose()",
+            "func_description":"以最大速度和夹力阈值参数关闭夹爪",
+            "func_description_en":"Close the gripper jaws with maximum speed and gripping force threshold parameters",
+			"first":{
+				"param_description":"等待夹爪关闭所需时间，单位：毫秒",
+                "param_description_en":"Time to wait for gripper to close in milliseconds",
+                "int_range":[
+                    0,
+                    60000
+                ],
+                "isDefault":false,
+                "type":"int"
+            }
+        },
+        {
+            "funcName":"RiqSet",
+            "funcShow":"RiqSet()",
+            "func_description":"根据配置的速度、夹力运动到指定位置",
+            "func_description_en":"Move to the specified position according to the configured speed and clamping force",
+            "first":{
+                "param_description":"夹爪目标位置，0是完全张开，255是完全关闭",
+                "param_description_en":"Digital output index. Value range: 1- 16",
+                "int_range":[
+                    0,
+                    255
+                ],
+                "isDefault":false,
+                "type":"int"
+            },
+            "second":{
+                "param_description":"夹爪运动速度，范围0~255",
+                "param_description_en":"Jaw movement speed, range 0~255",
+                "int_range":[
+                    0,
+                    255
+                ],
+                "isDefault":false,
+                "type":"int"
+            },
+            "third":{
+                "param_description":"夹爪夹力阈值，范围0~255",
+                "param_description_en":"Thickness of clamping jaws, range 0~255",
+                "int_range":[
+                    0,
+                    255
+                ],
+                "isDefault":false,
+                "type":"int"
+            },
+            "fourth":{
+                "param_description":"等待夹爪运动所需时间，单位：毫秒",
+                "param_description_en":"Waiting time for gripper movement, unit: ms",
+                "int_range":[
+                    0,
+                    60000
+                ],
+                "isDefault":false,
+                "type":"int"
+            }
+        }
+    ]
+}
