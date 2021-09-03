@@ -7,7 +7,7 @@
                     filter:invert(1);
                 }
             </style>
-            <img alt="measurements (invert)" src="cr5-spec-2.png" />
+            <img alt="measurements (invert)" src="./cr5-spec-2.png" />
         </div>
     </foreignObject>
 </svg>
